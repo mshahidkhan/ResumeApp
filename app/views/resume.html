@@ -1,0 +1,145 @@
+<section class="mdl-grid mdl-cell--8-col mdl-shadow--dp  mdl-color--grey-800" ng-controller="ResumeController">
+  <div class="mdl-card  mdl-cell--12-col mdl-cell--8-col-tablet  mdl-grid">
+    <div class="mdl-cell--12-col">
+      <span class="mdl-typography--headline">Personal Details and Objective</span>
+     <!--  <span >
+        <button ng-click="editContact($scope)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--fab mdl-button--mini-fab mdl-button--accent mdl-js-ripple-effect">
+          <i class="material-icons">edit</i>
+        </button>
+      </span> -->
+
+      <span style="float: right">
+      <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect mdl-border" for="icon-toggle-1">
+        <input type="checkbox" ng-model="editToggle" id="icon-toggle-1" class="mdl-icon-toggle__input">
+        <i class="mdl-icon-toggle__label material-icons">edit</i>
+      </label>
+    </span>
+
+
+    </div>
+
+    <div ng-include="getEditTemplate();" id="detailsMain" class="mdl-grid" ></div>
+
+  <script type="text/ng-template" id="editForm">
+
+
+    <form class="mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--white mdl-shadow--2dp mdl-grid">
+        <p><i class="material-icons">account_circle</i></p>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
+
+          <input type="text" ng-model="personalDetails.fullname" class="mdl-textfield__input" id="textfield-1" pattern=".?[A-Z,a-z]+?"/>
+          <label class="mdl-textfield__label" for="textfield-1">Username </label>
+          <span class="mdl-textfield__error"> Interesting, but we only allow alphabets <i class="material-icons">mood</i> </span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+          <input type="email" ng-model="personalDetails.email" class="mdl-textfield__input" id="email" />
+          <label class="mdl-textfield__label" for="email"><i class="material-icons">email</i> </label>
+          <span class="mdl-textfield__error"> Input is not a valid email! </span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+          <input type="text" ng-model="personalDetails.phone" class="mdl-textfield__input" id="phone" pattern=".?([0-9]+)?"/>
+          <label class="mdl-textfield__label" for="phone"><i class="material-icons">phone</i> </label>
+          <span class="mdl-textfield__error"> Input is not a number! </span>
+        </div>
+        <div class="mdl-cell--8-col">
+          <button ng-click="savePersonalDetails()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10" >Cancel
+          </button>
+          <button type="reset"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10">Save
+          </button>
+        </div>
+    </form>
+  </script>
+
+   <script type="text/ng-template" id="displayOnly">
+        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+          <label class=" "><i class="material-icons">account_circle</i> {{personalDetails.fullname}} </label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+          <label class=" "><i class="fa fa-key fa-lg"></i> {{personalDetails.phone}}</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+          <label class=" "><i class="fa fa-key fa-lg "></i> {{personalDetails.email}}</label>
+        </div>
+  </script>
+
+
+
+
+<!--
+<div class="container" >
+  <div class="row">
+    <table class="table table-stripes">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Fav Site 1</th>
+          <th>Fav Site 2</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in contactList.data" ng-include="getTemplate(contact)">
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/ng-template" id="display">
+      <td>{{contact.name}}</td>
+      <td>{{contact.fav1}}</td>
+      <td>{{contact.fav2}}</td>
+      <td>{{contact.city}}</td>
+      <td>{{contact.country}}</td>
+          <td>
+              <button ng-click="editContact(contact)">Edit</button>
+          </td>
+      </script>
+      <script type="text/ng-template" id="edit">
+          <td><input type="text" ng-model="contactList.selected.name" /></td>
+          <td><input type="text" ng-model="contactList.selected.fav1" /></td>
+          <td><input type="text" ng-model="contactList.selected.fav2" /></td>
+          <td><input type="text" ng-model="contactList.selected.city" /></td>
+          <td><input type="text" ng-model="contactList.selected.country" /></td>
+          <td>
+              <button ng-click="saveContact($index)">Save</button>
+              <button ng-click="reset()">Cancel</button>
+          </td>
+      </script>
+  </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
+  </div>
+</section>
+<section class="mdl-grid mdl-cell--8-col mdl-shadow--dp  mdl-color--grey-700" >
+  <div class="mdl-card  mdl-cell--12-col mdl-cell--8-col-tablet  mdl-grid">
+
+
+  </div>
+</section>
+<section class="mdl-grid mdl-cell--8-col mdl-shadow--dp  mdl-color--grey-600" >
+  <div class="mdl-card  mdl-cell--12-col mdl-cell--8-col-tablet  mdl-grid">
+
+
+  </div>
+</section>
+<section class="mdl-grid mdl-cell--8-col mdl-shadow--dp  mdl-color--grey-500" >
+  <div class="mdl-card  mdl-cell--12-col mdl-cell--8-col-tablet  mdl-grid">
+
+
+  </div>
+</section>
+<section class="mdl-grid mdl-cell--8-col mdl-shadow--dp  mdl-color--grey-400" >
+  <div class="mdl-card  mdl-cell--12-col mdl-cell--8-col-tablet  mdl-grid">
+
+
+  </div>
+</section>

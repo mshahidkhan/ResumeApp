@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="resumeApp">
+<head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/animations.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+
+</head>
+<body>
+
+<div class="layout-transparent mdl-layout mdl-js-layout">
+
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+          <div class="mdl-layout__header-row">
+
+            <span class="mdl-layout-title">Logo</span>
+
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="">What's New</a>
+              <a class="mdl-navigation__link" href="">Sign In</a>
+              <a class="mdl-navigation__link" href="">Sign Up</a>
+              <a class="mdl-navigation__link" href="">Learn More</a>
+            </nav>
+          </div>
+        </header>
+
+
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Logo</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">What's New</a>
+            <a class="mdl-navigation__link" href="">Sign In</a>
+            <a class="mdl-navigation__link" href="">Sign Up</a>
+            <a class="mdl-navigation__link" href="">Learn More</a>
+          </nav>
+        </div>
+
+
+        <main class="mdl-layout__content">
+
+
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+              <div class="mdl-logo">Logo</div>
+            </div>
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="">Help</a></li>
+              <li><a href="">About</a></li>
+            </ul>
+        </footer>
+      </div>
+
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/resumeController.js"></script>
+    <script src="app/controllers/profileController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/services/customersFactory.js"></script>
+    <script src="app/services/values.js"></script>
+    <script src="app/directives/linkDemoDirective.js"></script>
+
+</body>
+</html>

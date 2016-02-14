@@ -1,0 +1,41 @@
+<div class="mdl-grid mdl-color--grey-100" >
+
+  <div class="mdl-cell--6-col mdl-cell--6-col-tablet  mdl-grid">
+
+    <form ng-submit="registerUser()" ng-controller="RegisterController" class="mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--white mdl-shadow--2dp mdl-grid" >
+
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
+          <input type="text" ng-model="username" class="register mdl-textfield__input" id="textfield-1" pattern=".?[A-Z,a-z]+?"/>
+          <label class="mdl-textfield__label" for="textfield-1"><i class="material-icons">account_circle</i> </label>
+          <span class="mdl-textfield__error"> Interesting, but we only allow alphabets <i class="material-icons">mood</i> </span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
+          <input type="password" ng-model="password" class="register mdl-textfield__input" id="password" />
+          <label class="mdl-textfield__label" for="password"><i class="fa fa-key fa-lg"></i></label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
+          <input type="password" ng-model="confirmPassword" class="register mdl-textfield__input" id="cnfPassword" />
+          <label class="mdl-textfield__label" for="cnfPassword"><i class="fa fa-key fa-lg "></i> Confirm</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
+          <input type="email" ng-model="email" class="register mdl-textfield__input" id="email" />
+          <label class="mdl-textfield__label" for="email"><i class="material-icons">email</i> </label>
+          <span class="mdl-textfield__error"> Input is not a valid email! </span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
+          <input type="text" ng-model="phone" class="register mdl-textfield__input" id="phone" pattern=".?([0-9]+)?"/>
+          <label class="mdl-textfield__label" for="phone"><i class="material-icons">phone</i> </label>
+          <span class="mdl-textfield__error"> Input is not a number! </span>
+        </div>
+
+          <button type="submit"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Submit
+          </button>
+    </form>
+
+  </div>
+</div>
+
+<div>
+  <a ng-click="showModalHere()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">show dialog
+        </a>
+</div>

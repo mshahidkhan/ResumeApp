@@ -1,0 +1,70 @@
+<!doctype html>
+<html >
+<head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/animations.css" rel="stylesheet" type="text/css" />
+    <link href="styles/temp.css" rel="stylesheet" type="text/css" />
+    <link href="styles/timeline.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="styles/mdl-jquery-custom-modal.css">
+
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/percircle.js"></script>
+
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+</head>
+<body>
+    <div class="layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row ">
+                <span class="mdl-layout-title"><a href>Logo</a></span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only"><a href="/#/profile" class="mdl-navigation__link mdl-text-color--blue">Profile</a></nav>
+                <nav class="mdl-navigation mdl-layout--large-screen-only"><a href="/#/resume" class="mdl-navigation__link mdl-text-color--blue">Resume</a></nav>
+                <nav class="mdl-navigation mdl-layout--large-screen-only"><a href="/#/register" class="mdl-navigation__link mdl-text-color--blue">Register</a></nav>
+                <nav class="mdl-navigation mdl-layout--large-screen-only"><a href="/#/test" class="mdl-navigation__link mdl-text-color--blue">Test</a></nav>
+            </div>
+        </header>
+
+        <main class="" style="min-height: 800px;">
+            <div ng-view class="slide-animation" ></div>
+        </main>
+
+<!--         <div my-dom-directive>Click Me!</div> -->
+
+
+    </div>
+
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/registerController.js"></script>
+    <script src="app/controllers/resumeController.js"></script>
+    <script src="app/controllers/profileController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/services/customersFactory.js"></script>
+    <script src="app/services/values.js"></script>
+    <script src="app/directives/linkDemoDirective.js"></script>
+    <script src="js/mdl-jquery-custom-modal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+/*.pad10{
+    padding: 10px;
+}*/
+
+/*
+.register.mdl-textfield__input {
+    padding: 14px 0;
+}*/
+
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+th {
+    text-align: left;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+tr.footer {
+    background-color: #efefef;
+}
+
+main {
+    margin-left: 12px;
+    margin-right:25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
+
+
+.layout-transparent {
+  /*background: url('/images/winter.jpg') center / cover;*/
+
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  color: white;
+}
+
+.heading-background{
+    background-color: rgba(144, 164, 174, 0.07);
+}
+
