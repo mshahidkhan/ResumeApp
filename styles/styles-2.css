@@ -43,8 +43,8 @@
 
 .demo-content {
   border-radius: 2px;
-  padding: 80px 56px;
-  margin-bottom: 80px;
+  padding: 20px 20px;
+  margin-bottom: 10px;
 }
 
 .demo-layout.is-small-screen .demo-content {

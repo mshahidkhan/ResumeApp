@@ -18,28 +18,58 @@
 
     </div>
 
-    <div ng-include="getEditTemplate();" id="detailsMain" class="mdl-grid" ></div>
+    <div ng-include="getEditTemplate();" class="mdl-grid" ></div>
 
   <script type="text/ng-template" id="editForm">
-
-
-    <form class="mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--white mdl-shadow--2dp mdl-grid">
-        <p><i class="material-icons">account_circle</i></p>
-        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
-
-          <input type="text" ng-model="personalDetails.fullname" class="mdl-textfield__input" id="textfield-1" pattern=".?[A-Z,a-z]+?"/>
-          <label class="mdl-textfield__label" for="textfield-1">Username </label>
-          <span class="mdl-textfield__error"> Interesting, but we only allow alphabets <i class="material-icons">mood</i> </span>
+    <form class="mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--white mdl-grid">
+      <div>
+        <span class="mdl-cell--middle"> <i class="fa fa-user fa-lg fa-fw"></i></span>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input type="text" class="mdl-textfield__input" id="tf-1" pattern=".?[0-9]*(\.[0-9]+)?"/>
+          <label class="mdl-textfield__label" for="tf-1">Enter Number.... </label>
+          <span class="mdl-textfield__error"> Input is not a number! </span>
         </div>
-        <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
+      </div>
+
+      <div>
+        <span class="mdl-cell--middle"> <i class="fa fa-user fa-lg fa-fw"></i></span>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input type="text" class="mdl-textfield__input" id="tf-2" pattern=".?[0-9]*(\.[0-9]+)?"/>
+          <label class="mdl-textfield__label" for="tf-2">Enter Number.... </label>
+          <span class="mdl-textfield__error"> Input is not a number! </span>
+        </div>
+      </div>
+      <div>
+        <span class="mdl-cell--middle"> <i class="fa fa-user fa-lg fa-fw"></i></span>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input type="text" class="mdl-textfield__input" id="tf-3" pattern=".?[0-9]*(\.[0-9]+)?"/>
+          <label class="mdl-textfield__label" for="tf-3">Enter Number.... </label>
+          <span class="mdl-textfield__error"> Input is not a number! </span>
+        </div>
+      </div>
+
+
+      <div>
+        <button ng-click="savePersonalDetails()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10" >Cancel
+        </button>
+        <button type="reset"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10">Save
+        </button>
+      </div>
+    </form>
+
+    <!--<form class="mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--white mdl-shadow--2dp mdl-grid">
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
+          <input type="text" ng-model="personalDetails.fullname" class="mdl-textfield__input" id="textfield-1" />
+          <label class="mdl-textfield__label" for="textfield-1">Username </label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell--8-col">
           <input type="email" ng-model="personalDetails.email" class="mdl-textfield__input" id="email" />
           <label class="mdl-textfield__label" for="email"><i class="material-icons">email</i> </label>
           <span class="mdl-textfield__error"> Input is not a valid email! </span>
         </div>
         <div class="mdl-textfield mdl-js-textfield   mdl-cell--8-col">
-          <input type="text" ng-model="personalDetails.phone" class="mdl-textfield__input" id="phone" pattern=".?([0-9]+)?"/>
+          <input type="text" ng-model="personalDetails.phone" class="mdl-textfield__input" id="phone"/>
           <label class="mdl-textfield__label" for="phone"><i class="material-icons">phone</i> </label>
-          <span class="mdl-textfield__error"> Input is not a number! </span>
         </div>
         <div class="mdl-cell--8-col">
           <button ng-click="savePersonalDetails()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10" >Cancel
@@ -47,7 +77,7 @@
           <button type="reset"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect pad10">Save
           </button>
         </div>
-    </form>
+    </form> -->
   </script>
 
    <script type="text/ng-template" id="displayOnly">

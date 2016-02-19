@@ -7,6 +7,7 @@
         $scope.appSettings = appSettings;
         $scope.edit = false;
 
+
         function init() {
             $scope.personalDetails = {
                 fullname: 'Shahid',
@@ -19,15 +20,31 @@
                 phone: 9876543210
             };
 
+            //ajax call
             $scope.proficiencyArr = [
-                {text: 'Javascript', percent: 95, color: "orange small"},
+                {text: 'JS', percent: 85, color: "orange small"},
                 {text: 'AngularJS', percent: 90, color: "orange small"},
                 {text: 'NodeJS', percent: 85, color: "orange small"},
                 {text: 'HTML5', percent: 90, color: "red small"},
                 {text: 'MDL', percent: 90, color: "red small"},
                 {text: 'Bootstrap', percent: 90, color: "red small"},
-                {text: 'Java', percent: 90, color: "red medium"}
+                {text: 'Java', percent: 90, color: "red small"}
                 ];
+
+            $scope.languageArr = [
+                {text: 'English', percent: 90, color: "orange small"},
+                {text: 'Hindi', percent: 100, color: "orange small"}
+            ];
+
+            $scope.skills = [
+                {name: 'JS', percent: "50"},
+                {name: 'AngularJS', percent: "75"},
+                {name: 'Angular2', percent: "80"},
+                {name: 'NodeJS', percent: "40"},
+                {name: 'API', percent: "60"}
+            ];
+
+
         }
 
         init();
@@ -51,29 +68,29 @@
 
         };
 
-        $scope.$watch('detailsMain', function(){
+/*        $scope.$watch('detailsMain', function(){
             console.log("detailsMain Watch");
-            /*if (this.last === true)
+            if (this.last === true)
                 $scope.edit = true;
             else
-                $scope.edit = false;*/
+                $scope.edit = false;
         });
 
-
+*/
 
         $scope.editContact = function (obj) {
             $scope.edit = true;
             $scope.personalDetails = angular.copy($scope.pd);
         };
 
-        $scope.update = function(user) {
+/*        $scope.update = function(user) {
             $scope.master = angular.copy(user);
         };
 
         $scope.reset = function() {
             $scope.user = angular.copy($scope.master);
         };
-
+*/
 
         $scope.saveContact = function (idx) {
             console.log("Saving contact");
@@ -92,60 +109,5 @@
 
     angular.module('resumeApp')
       .controller('ResumeController', ResumeController);
-
-
-     /* $scope.contactList = {
-            "selected": {},
-            "data":     [
-            {
-                "id": 10001,
-                "name": "Shahid",
-                "fav1": "facebook.com",
-                "fav2": "twitter.com",
-                "city": "Norman",
-                "country": "USA"
-            },
-            {
-                "id": 10002,
-                "name": "Madhu",
-                "fav1": "google.com",
-                "fav2": "ndtv.com",
-                "city": "Norman",
-                "country": "USA"
-            },
-            {
-                "id": 10003,
-                "name": "Shravani",
-                "fav1": "apple.com",
-                "fav2": "facebool.com",
-                "city": "Edmond",
-                "country": "USA"
-            },
-            {
-                "id": 10004,
-                "name": "Varada",
-                "fav1": "craigslist.com",
-                "fav2": "yahoo.com",
-                "city": "Moore",
-                "country": "USA"
-            },
-            {
-                "id": 10005,
-                "name": "Sudeep",
-                "fav1": "facebook.com",
-                "fav2": "twitter.com",
-                "city": "Tulsa",
-                "country": "USA"
-            },
-            {
-                "id": 10006,
-                "name": "Sandeep",
-                "fav1": "yahoo.com",
-                "fav2": "yahoo.com",
-                "city": "Tulsa",
-                "country": "USA"
-            }
-        ] } ;
- */
 
 }());
