@@ -1,0 +1,25 @@
+{
+  "name": "resumeapp",
+  "version": "1.0.0",
+  "description": "resume app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshahidkhan/ResumeApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mshahidkhan/ResumeApp/issues"
+  },
+  "homepage": "https://github.com/mshahidkhan/ResumeApp#readme"
+}
